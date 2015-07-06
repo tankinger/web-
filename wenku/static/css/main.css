@@ -1,0 +1,36 @@
+.main1 {
+margin: 0 auto;
+height:860px;
+
+}
+.main2{
+width:100%;
+height:100%;
+}
+.color1{
+background-color:#316FE8;
+
+}
+.l_width1{
+width:60%;
+}
+.r_width2{
+width:55%;
+
+}
+
+.l_margin1{
+margin-left:1.5%;
+}
+
+.l_padding1{
+padding-top:25%;
+}
+
+.r_margin1{
+margin-right:10px;
+}
+
+.login_font_color{
+color:#ABABAB;
+}
