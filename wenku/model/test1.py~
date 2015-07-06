@@ -1,0 +1,10 @@
+#!/usr/bin/python
+#encoding=utf-8
+
+import sys
+reload (sys)
+sys.setdefaultencoding('utf-8')
+from login import LoginCheck
+
+logincheck = LoginCheck()
+logincheck.login_check('tancj','tancj','User')

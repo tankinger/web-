@@ -1,0 +1,160 @@
+#!/usr/bin/python
+#encoding=utf-8
+import MySQLdb
+import sys
+# reload (sys)
+# sys.setdefaultencoding('utf-8')
+
+class ikeda_mstx():
+	def ID(self):
+		
+		conn=MySQLdb.connect(host='10.9.32.162',user='root',passwd='19830219',db='ikeda')
+		cur=conn.cursor()
+#get max id
+		kk="select * from mstx where id=(select max(id) from mstx)"
+		count=cur.execute(kk)
+		maxs=cur.fetchone()
+		i=maxs[0]
+
+#search all information
+		sql="select * from mstx"
+		count=cur.execute(sql)
+		result=cur.fetchmany(i)
+		print result
+		ID=[]
+		
+
+		j=0
+		while j<i:
+			ID.append(result[j][0])
+			j+=1
+		conn.commit()
+		cur.close()
+	
+		conn.close()
+		return ID
+
+
+	def zone(self):
+		
+		conn=MySQLdb.connect(host='10.9.32.162',user='root',passwd='19830219',db='ikeda')
+		cur=conn.cursor()
+		kk="select * from mstx where id=(select max(id) from mstx)"
+		count=cur.execute(kk)
+		maxs=cur.fetchone()
+		i=maxs[0]
+		sql="select * from mstx"
+		count=cur.execute(sql)
+		result=cur.fetchmany(i)
+		zone=[]
+		j=0
+		while j<i:
+			zone.append(result[j][1])
+			j+=1
+		conn.commit()
+		cur.close()
+		conn.close()
+		return zone
+
+
+	def name(self):
+		
+		conn=MySQLdb.connect(host='10.9.32.162',user='root',passwd='19830219',db='ikeda')
+		cur=conn.cursor()
+		kk="select * from mstx where id=(select max(id) from mstx)"
+		count=cur.execute(kk)
+		maxs=cur.fetchone()
+		i=maxs[0]
+		sql="select * from mstx"
+		count=cur.execute(sql)
+		result=cur.fetchmany(i)
+		name=[]
+		j=0
+		while j<i:
+			name.append(result[j][2])
+			j+=1
+		conn.commit()
+		cur.close()
+		conn.close()
+		return name
+			
+
+	def address(self):
+		
+		conn=MySQLdb.connect(host='10.9.32.162',user='root',passwd='19830219',db='ikeda')
+		cur=conn.cursor()
+		kk="select * from mstx where id=(select max(id) from mstx)"
+		count=cur.execute(kk)
+		maxs=cur.fetchone()
+		i=maxs[0]
+		sql="select * from mstx"
+		count=cur.execute(sql)
+		result=cur.fetchmany(i)
+		address=[]
+		j=0
+		while j<i:
+			address.append(result[j][3])
+			j+=1
+		conn.commit()
+		cur.close()
+		conn.close()
+		return address
+
+
+
+	def telephone(self):
+		
+		conn=MySQLdb.connect(host='10.9.32.162',user='root',passwd='19830219',db='ikeda')
+		cur=conn.cursor()
+		kk="select * from mstx where id=(select max(id) from mstx)"
+		count=cur.execute(kk)
+		maxs=cur.fetchone()
+		i=maxs[0]
+		sql="select * from mstx"
+		count=cur.execute(sql)
+		result=cur.fetchmany(i)
+		telephone=[]
+		j=0
+		while j<i:
+			telephone.append(result[j][4])
+			j+=1
+		conn.commit()
+		cur.close()
+		conn.close()
+		return telephone
+
+
+
+	def map1(self):
+		
+		conn=MySQLdb.connect(host='10.9.32.162',user='root',passwd='19830219',db='ikeda')
+		cur=conn.cursor()
+		kk="select * from mstx where id=(select max(id) from mstx)"
+		count=cur.execute(kk)
+		maxs=cur.fetchone()
+		i=maxs[0]
+		sql="select * from mstx"
+		count=cur.execute(sql)
+		result=cur.fetchmany(i)
+		map1=[]
+		j=0
+		while j<i:
+			map1.append(result[j][5])
+			j+=1
+		conn.commit()
+		cur.close()
+		conn.close()
+		return map1
+
+
+
+			
+			
+			
+			
+			
+			
+		
+	
+
+		

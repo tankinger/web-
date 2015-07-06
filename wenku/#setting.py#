@@ -1,0 +1,41 @@
+#encoding=utf-8
+## Copyright (C), 2013-2014, ****.
+## File name:       setting.py
+## Author:          liutao    liutaoup@gmail.com
+## Version:         0.1.7
+## Date:            2013-09-10
+## Description:     settings for server
+## Others:          none
+## History:         none 
+##   1. Date:
+##      Author:
+##      Modification:
+##   2. ...
+
+import os
+
+from  handlers.MainHandler import MainHandler
+from  handlers.Product import ProductHandler
+from  handlers.Partner  import PartnerHandler
+from  handlers.Team  import TeamHandler
+from  handlers.ContactUs import ContactUsHandler
+from  handlers.AdminHandler import AdminHandler
+from handlers.AddHandler import AddHandler
+#from handlers.temp import temp
+PORT = '8888'
+
+SETTINGS = dict(
+    template_path = os.path.join(os.path.dirname(__file__),"templates"),
+    static_path = os.path.join(os.path.dirname(__file__),"static"),
+    )
+
+urls = [
+    (r'/',MainHandler) ,
+    (r'/product',ProductHandler),
+    (r'/partner',PartnerHandler),
+    (r'/team',TeamHandler),
+    (r'/contactus',ContactUsHandler),
+    (r'/admin',AdminHandler),
+    (r'/add',AddHandler),
+    ]
+myCookeSecret="KCSSGoodLuckComeOn"
