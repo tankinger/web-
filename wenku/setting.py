@@ -16,7 +16,7 @@
 import os
 from  handlers.MysqlHandler import mysqlHandler
 from  handlers.shujuHandler import shujuHandler
-
+from  handlers.LoginHandler import LoginHandler
 
 
 
@@ -29,8 +29,7 @@ SETTINGS = dict(
 
 urls = [
   
-    (r'/mysql.html',mysqlHandler),
-    (r'/shuju.html',shujuHandler)
+    (r'/login',LoginHandler)
     
 ]
 myCookeSecret="KCSSGoodLuckComeOn"

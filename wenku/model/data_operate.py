@@ -6,7 +6,7 @@ reload (sys)
 sys.setdefaultencoding('utf-8')
 from mysql_m import MysqlInfo
 
-class LoginCheck(object):
+class MysqlDataOperate(object):
     def __init__(self,username='',passwd='',table_name=''):
         self.username = username
         self.passwd = passwd

@@ -14,9 +14,11 @@
 ##   2. ...
 
 import os
+from  handlers.MysqlHandler import mysqlHandler
+from  handlers.shujuHandler import shujuHandler
+from  handlers.LoginHandler import LoginHandler
 
-from handlers.MysqlHandler import mysqlHandler
-from handlers.shujuHandler import shujuHandler
+
 
 PORT = '8888'
 
@@ -26,8 +28,8 @@ SETTINGS = dict(
     )
 
 urls = [
-	(r'/mysql.html',mysqlHandler),
-	(r'/shuju.html',shujuHandler)
+  
+    (r'/login.html',LoginHandler)
     
-    ]
+]
 myCookeSecret="KCSSGoodLuckComeOn"
