@@ -18,7 +18,7 @@ class MysqlInfo(object):
     updata_data 数据更新
     get_data  数据获取
     '''
-    def __init__(self,host='10.9.33.148',user='root',passwd='kedaadmin',db='wenku'):
+    def __init__(self,host='192.168.0.103',user='root',passwd='830219',db='wenku'):
         self.host = host
         self.user = user
         self.passwd = passwd

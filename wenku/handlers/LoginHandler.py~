@@ -14,7 +14,7 @@ from model.data_operate import MysqlDataOperate
 
 class LoginHandler(tornado.web.RequestHandler):
     def get(self):
-        #self.render('login.html')
+        self.render('login.html')
 
     def post(self):
         try:
@@ -23,7 +23,7 @@ class LoginHandler(tornado.web.RequestHandler):
             print self.Username
             print self.Passwd
 
-            self.render('login.html')
+            
 
         except Exception as e:
             print e
