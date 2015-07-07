@@ -18,7 +18,7 @@ class MysqlInfo(object):
     updata_data 数据更新
     get_data  数据获取
     '''
-    def __init__(self,host='192.168.0.103',user='root',passwd='830219',db='wenku'):
+    def __init__(self,host='10.9.33.148',user='root',passwd='kedaadmin',db='wenku'):
         self.host = host
         self.user = user
         self.passwd = passwd
@@ -29,7 +29,7 @@ class MysqlInfo(object):
     def connect_order(self,sql):
         '传递参数 sql为标准的mysql操作命令 (类型为字符串) '
 
-        conn = MySQLdb.connect(self.host,self.user,self.passwd,self.db,charset = 'utf8',cursorclass = MySQLdb.cursors.DictCursor)
+        conn = MySQLdb.connect(self.host,self.user,self.passwd,self.db,charset = 'utf8')
         cur = conn.cursor()
         new_order = cur.execute(sql)
         conn.commit()
@@ -76,7 +76,7 @@ class MysqlInfo(object):
         sql_get_dict = {0:max_id_data,1:all_data,2:self_defined}
         sql_get_data =  sql_get_dict.get(oper)
         try:
-            conn = MySQLdb.connect(self.host,self.user,self.passwd,self.db,charset = 'utf8')
+            conn = MySQLdb.connect(self.host,self.user,self.passwd,self.db,charset = 'utf8',cursorclass = MySQLdb.cursors.DictCursor)
             cur = conn.cursor()
             new_order = cur.execute(sql_get_data)
             data_info = cur.fetchmany(new_order)

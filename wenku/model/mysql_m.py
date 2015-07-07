@@ -18,7 +18,7 @@ class MysqlInfo(object):
     updata_data 数据更新
     get_data  数据获取
     '''
-    def __init__(self,host='192.168.0.103',user='root',passwd='830219',db='wenku'):
+    def __init__(self,host='10.9.33.148',user='root',passwd='kedaadmin',db='wenku'):
         self.host = host
         self.user = user
         self.passwd = passwd
@@ -91,10 +91,9 @@ class MysqlInfo(object):
 
 if __name__ == '__main__':
     mysqlinfo = MysqlInfo()
-    table_name = 'user'
-    list_element = "(username,passwd,flag,Integral)"
-    list_data = "('tancy','tancy','1','20')"
-    mysqlinfo.insert_data_one(table_name,list_element,list_data)
+    table_name = 'User'
+    username_sql = "select Username from User where Username='tancj'"
+    print mysqlinfo.get_data(table_name,2,username_sql)
 
 
 
