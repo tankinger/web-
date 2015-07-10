@@ -34,3 +34,13 @@ margin-right:10px;
 .login_font_color{
 color:#ABABAB;
 }
+.login_info_left{
+padding-left:34%;
+}
+.login_passwd_top{
+margin-top:-8%;
+}
+
+.hide_div{
+visibility:hidden;
+}
